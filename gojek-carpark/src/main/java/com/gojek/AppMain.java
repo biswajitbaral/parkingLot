@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 /**
  * Hello world!
  *
@@ -39,6 +38,10 @@ public class AppMain
 					e.printStackTrace();
 				}
 			}
+			break;
+			
+		case 1:
+			parseInputFile(args[0]);
 			break;
 		
 		}
