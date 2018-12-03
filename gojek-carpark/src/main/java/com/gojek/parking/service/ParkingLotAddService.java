@@ -16,7 +16,6 @@ public class ParkingLotAddService implements ParkingService {
 
 			Integer capacity = Integer.valueOf((String) param.getValue()[1]);
 			ParkingDetail.getInstance().createSlotList(capacity);
-			//GoJekParkingSearchMap.initializeSearchMap();
 			System.out.println(MessageFormat.format(CommonConstant.PARKING_LOT_CREATED, capacity));
 
 		} catch (NumberFormatException e) {

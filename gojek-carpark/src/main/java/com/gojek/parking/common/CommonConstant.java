@@ -3,6 +3,7 @@ package com.gojek.parking.common;
 public class CommonConstant {
 
 	
+	
 	public static final String PARKING_LOT_CREATED = "Created a parking lot with {0} slots";
 
 	public static final String ERROR_INVALID_SPACE_NO = "Invalid parking space";
@@ -12,6 +13,9 @@ public class CommonConstant {
 	public static final String CREATE_PARKING_LOT ="create_parking_lot";
 	
 	public static final String PARK ="park";
+	public static final String PARKING_FULL = "Sorry, parking lot is full";
+	
+	public static final String PARKING_USED = "Allocated slot number: {0} by car {1}";
 	
 	public static final String REG_NUM_FOR_CARS_COL ="registration_numbers_for_cars_with_colour";
 	public static final String LEAVE ="leave";

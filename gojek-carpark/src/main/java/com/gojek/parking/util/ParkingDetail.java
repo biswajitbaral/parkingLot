@@ -2,9 +2,10 @@ package com.gojek.parking.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.gojek.parking.vehicle.model.Vehicle;
@@ -38,6 +39,9 @@ public class ParkingDetail {
 	
 	private  ArrayList<Vehicle> avlSlotList;
 	
+	private TreeSet<Integer> slotNumbers;
+	
+	
 	private static ConcurrentHashMap<String, Integer> slotRegistrationNoMap;
 	
 	private static ConcurrentHashMap<String, List<Integer>> colorPrkLotMap;
@@ -50,6 +54,10 @@ public class ParkingDetail {
 					avlSlotList = new ArrayList<Vehicle>(Collections.nCopies(maxSize, null));
 					slotRegistrationNoMap= new ConcurrentHashMap<String,Integer>();
 					colorPrkLotMap= new ConcurrentHashMap<>();
+					slotNumbers= new TreeSet<Integer>();
+					for(int i=1;i<=maxSize;i++) {
+						slotNumbers.add(i);
+					}
 				}
 			}
 		}
@@ -83,6 +91,18 @@ public class ParkingDetail {
 	public Map<String, List<Integer>> getColorLotMap() {
 		
 		return colorPrkLotMap;
+	}
+	
+	public TreeSet<Integer> getslotNumbers() {
+			synchronized (this) {
+				return slotNumbers;
+			}
+			
+		}
+	public void addSlotNumber(int slot) {
+		synchronized (this) {
+		 slotNumbers.add(slot);
+		}
 	}
 
 }
