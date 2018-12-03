@@ -8,7 +8,7 @@ public class TestRunner {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Result result = JUnitCore.runClasses(ParkACarServiceTest.class,LeaveParkingServiceTest.class);					
+		Result result = JUnitCore.runClasses(ParkACarServiceTest.class);					
 		for (Failure failure : result.getFailures()) {							
      System.out.println(failure.toString());					
   }		
