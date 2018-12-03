@@ -11,7 +11,7 @@ import com.gojek.parking.vehicle.model.ParkingParameter;
 public class ParkingLotAddService implements ParkingService {
 
 	@Override
-	public void doAction(ParkingParameter param) throws NumberFormatException {
+	public void execute(ParkingParameter param) throws NumberFormatException {
 		try {
 
 			Integer capacity = Integer.valueOf((String) param.getValue()[1]);

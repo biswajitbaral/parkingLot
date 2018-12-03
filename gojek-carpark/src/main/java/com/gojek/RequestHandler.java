@@ -14,7 +14,7 @@ public class RequestHandler {
 	
 		ParkingParameter param = new ParkingParameter();
 		param.setValue(values);
-		pService.doAction(param);
+		pService.execute(param);
 	}
 
 	
