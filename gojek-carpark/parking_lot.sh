@@ -1,0 +1,1 @@
+java -jar target/gojek-carpark.jar $1
