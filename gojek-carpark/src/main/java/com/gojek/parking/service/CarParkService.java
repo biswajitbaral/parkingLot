@@ -30,8 +30,7 @@ public class CarParkService implements ParkingService {
 		ParkingUpdateUtil.addCarToParkingLot(car, firstAvaiableSlot);
 
 		ParkingDetail.getInstance().getAvailableSlotList().set(firstAvaiableSlot-1, car);
-		System.out.println(MessageFormat.format(CommonConstant.PARKING_USED, firstAvaiableSlot ,
-				car.getRegistrationNo()));
+		System.out.println(MessageFormat.format(CommonConstant.PARKING_USED, firstAvaiableSlot));
 	}
 
 	private Integer getFirstEmptySlot() {

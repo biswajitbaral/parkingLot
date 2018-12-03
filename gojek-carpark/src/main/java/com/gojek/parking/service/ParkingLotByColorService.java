@@ -9,7 +9,7 @@ public class ParkingLotByColorService implements ParkingService {
 	public void execute(ParkingParameter param) {
 		String color = param.getValue()[1];
 		ParkingDetail.getInstance().getColorLotMap().get(color).forEach(value -> {
-			System.out.println(value + 1);
+			System.out.println(value );
 		});
 	}
 

@@ -1,5 +1,6 @@
 package com.gojek;
 
+import com.gojek.parking.service.CarParkService;
 import com.gojek.parking.service.LeaveParkingLotService;
 import com.gojek.parking.service.ParkingLotAddService;
 import com.gojek.parking.service.ParkingLotByColorService;
@@ -35,6 +36,9 @@ public class RequestFactory {
 	        case SLOT_NUM:
 	        	 pService = new  ParkingLotByRegistrationNoService();
 		            break;
+	        case PARK:
+	        	pService = new  CarParkService();
+	            break;
 	        	 
 	       
 	        }

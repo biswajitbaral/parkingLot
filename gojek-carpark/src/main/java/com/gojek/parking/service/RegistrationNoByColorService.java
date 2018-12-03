@@ -10,7 +10,7 @@ public class RegistrationNoByColorService implements ParkingService {
 		String color = param.getValue()[1];
 
 		ParkingDetail.getInstance().getColorLotMap().get(color).forEach(slot -> {
-			System.out.println(ParkingDetail.getInstance().getAvailableSlotList().get(slot).getRegistrationNo());
+			System.out.println(ParkingDetail.getInstance().getAvailableSlotList().get(slot-1).getRegistrationNo());
 		});
 	}
 

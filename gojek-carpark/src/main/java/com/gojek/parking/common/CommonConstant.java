@@ -13,10 +13,12 @@ public class CommonConstant {
 	
 	public static final String PARKING_FULL = "Sorry, parking lot is full";
 	
-	public static final String PARKING_USED = "Allocated slot number: {0} by car {1}";
+	public static final String PARKING_USED = "Allocated slot number: {0}";
 	
 	public static final String NOT_FOUND = "Not found";
 	public static final String SLOT_FREE = "Slot number {0} is free";
+	
+	public static final String INVALID_REQUEST = "Invalid request - {0}";
 	
 public static final String CREATE_PARKING_LOT ="create_parking_lot";
 	

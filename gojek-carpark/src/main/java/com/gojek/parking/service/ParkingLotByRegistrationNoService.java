@@ -15,7 +15,7 @@ public class ParkingLotByRegistrationNoService implements ParkingService {
 		if (result == null) {
 			System.out.println(CommonConstant.NOT_FOUND);
 		} else {
-			System.out.println(result+1);
+			System.out.println(result);
 		}
 
 	}
