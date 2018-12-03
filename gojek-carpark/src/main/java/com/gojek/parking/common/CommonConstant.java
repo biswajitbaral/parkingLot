@@ -17,6 +17,9 @@ public class CommonConstant {
 	
 	public static final String PARKING_USED = "Allocated slot number: {0} by car {1}";
 	
+	public static final String NOT_FOUND = "Not found";
+	public static final String SLOT_FREE = "Slot number {0} is free";
+	
 	public static final String REG_NUM_FOR_CARS_COL ="registration_numbers_for_cars_with_colour";
 	public static final String LEAVE ="leave";
 	public static final String STATUS ="status";
