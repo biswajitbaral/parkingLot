@@ -29,7 +29,7 @@ public class CarParkService implements ParkingService {
 		Vehicle car = new Car(param.getValue()[1], param.getValue()[2]);
 		ParkingUpdateUtil.addCarToParkingLot(car, firstAvaiableSlot);
 
-		ParkingDetail.getInstance().getAvailableSlotList().set(firstAvaiableSlot, car);
+		ParkingDetail.getInstance().getAvailableSlotList().set(firstAvaiableSlot-1, car);
 		System.out.println(MessageFormat.format(CommonConstant.PARKING_USED, firstAvaiableSlot ,
 				car.getRegistrationNo()));
 	}
